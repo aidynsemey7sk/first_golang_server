@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Контакты</h1>
+    <p>email: @telegram</p>
+    
+    <h2>Напишите нам</h2>
+    <form action="/contact" method="POST">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="message">Сообщение:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        
+        <input type="submit" value="Отправить">
+    </form>
+    
+    <p><a href="/">Вернуться на главную страницу</a></p>
+    <p><a href="/about">О нас</a></p>
+</body>
+</html>

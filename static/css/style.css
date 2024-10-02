@@ -1,0 +1,34 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.main-title {
+    color: #dd0e0e;                /* Цвет текста */
+    font-size: 2.5em;          /* Размер шрифта */
+    text-align: center;        /* Выравнивание текста */
+    margin-bottom: 20px;       /* Отступ снизу */
+    text-transform: uppercase;  /* Преобразование текста в верхний регистр */
+    letter-spacing: 2px;       /* Расстояние между буквами */
+}
+
+h1 {
+    font-size: 3em;                       /* Размер шрифта */
+    color: #4A90E2;                       /* Цвет текста */
+    text-align: center;                   /* Выравнивание по центру */
+    margin: 20px 0;                       /* Отступ сверху и снизу */
+    padding: 10px;                        /* Внутренний отступ */
+    background-color: rgba(74, 144, 226, 0.1); /* Полупрозрачный фон */
+    border: 2px solid #4A90E2;            /* Рамка вокруг заголовка */
+    border-radius: 10px;                  /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: transform 0.3s;           /* Плавный переход для эффекта при наведении */
+}
+
+p {
+    color: #4A90E2; 
+}
