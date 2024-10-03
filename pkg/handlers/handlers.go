@@ -7,11 +7,20 @@ import (
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-
 	log.Printf("Запрос: метод=%s, URL=%s, с IP=%s\n", r.Method, r.URL.Path, r.RemoteAddr)
 
-	tmpl := template.Must(template.ParseFiles("templates/index.html"))
-	tmpl.Execute(w, nil)
+	tmpl, err := template.ParseFiles("templates/index.html")
+	if err != nil {
+		log.Printf("Ошибка загрузки шаблона из пути: %s, ошибка: %v", "templates/index.html", err)
+		http.Error(w, "Ошибка загрузки шаблона", http.StatusInternalServerError)
+		return
+	}
+
+	if err := tmpl.Execute(w, nil); err != nil {
+		http.Error(w, "Ошибка при выполнении шаблона", http.StatusInternalServerError)
+		log.Printf("Ошибка при выполнении шаблона: %v", err)
+		return
+	}
 }
 
 func About(w http.ResponseWriter, r *http.Request) {

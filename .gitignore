@@ -1,0 +1,11 @@
+# Логи
+logs/
+
+# Скомпилированные бинарные файлы
+*.exe
+*.bin
+
+# Файлы IDE
+.idea/
+*.sublime-workspace
+*.sublime-project
